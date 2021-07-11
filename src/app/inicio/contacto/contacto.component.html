@@ -1,0 +1,66 @@
+<div class="page" data-aos="fade-up" data-aos-duration="2000">
+      <div class="contact-wrap">
+        <div class="contact-html">
+          <h2 class="position-relative text-center text-white">Contacto</h2>
+          <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="saveFormContact()">
+            <div class="sign-in-htm">
+              <div class="group">
+                <label for="nombre" class="label">Nombre</label>
+                <input id="nombre" type="text" class="input" formControlName="nombre" placeholder="nombre y apellido">
+                <div class="alert-dangerus" *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)">
+                  <div class="container-error-message" *ngIf="nombre?.hasError('required')">
+                    <p class="text-danger pt-2 ps-3">El nombre es requerido.</p>
+                  </div>
+                  <div class="container-error-message" *ngIf="nombre?.hasError('minlength')">
+                    <p class="text-danger pt-2 ps-3">El nombre debe contener 5 caracteres como mínimo.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Email</label>
+                <input id="pass" type="email" class="input" formControlName="email" placeholder="ejemplo@correo.com">
+                <div class="alert-dangerus" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                  <div class="container-error-message" *ngIf="email?.hasError('required')">
+                    <p class="text-danger pt-2 ps-3">El email es requerido.</p>
+                  </div>
+                  <div class="container-error-message" *ngIf="email?.hasError('pattern')">
+                    <p class="text-danger pt-2 ps-3">Debe ser una dirección de email válida.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="group">
+                <label for="telefono" class="label">Teléfono</label>
+                <input id="telefono" type="tel" class="input" formControlName="telefono" placeholder="3751-229056">
+                <div class="alert-dangerus" *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)">
+                  <div class="container-error-message" *ngIf="telefono?.hasError('required')">
+                    <p class="text-danger pt-2 ps-3">El telefono es requerido.</p>
+                  </div>
+                  <div class="container-error-message" *ngIf="telefono?.hasError('pattern')">
+                    <p class="text-danger pt-2 ps-3">El teléfono no es correcto.</p>
+                  </div>
+                  <div class="container-error-message" *ngIf="telefono?.hasError('minlength')">
+                    <p class="text-danger pt-2 ps-3">El telefono debe contener al menos 6 caracteres.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="group">
+                <label for="consulta" class="label">Consulta</label>
+                <textarea name="consulta" id="consulta" rows="5" class="input" formControlName="consulta" placeholder="su mensaje"></textarea>
+                <div class="alert-dangerus" *ngIf="consulta?.invalid && (consulta?.dirty || consulta?.touched)">
+                  <div class="container-error-message" *ngIf="consulta?.hasError('required')">
+                    <p class="text-danger pt-2 ps-3">Su consulta no puede estar vacía.</p>
+                  </div>
+                  <div class="container-error-message" *ngIf="consulta?.hasError('maxlength')">
+                    <p class="text-danger pt-2 ps-3">Su consulta debe contener como máximo 280 caracteres.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="group pt-4">
+                <!-- <button class="button" type="submit" [disabled]="contactForm.invalid">Enviar</button> -->
+                <button class="btn btn-primary w-100 p-3 rounded" type="submit" [disabled]="contactForm.invalid">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+</div>

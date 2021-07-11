@@ -1,0 +1,216 @@
+#billeterapage {
+  /* width: 100%; */
+  /* overflow-x:visible; */
+  width: 90%;
+
+  /* background-color: brown; */
+}
+
+.backgroundBilletera {
+  position: absolute;
+  top:90vh;
+  left:0;
+  width: 100%;
+  height: 160vh;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
+.container {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
+
+.remarcado {
+  color: aqua;
+}
+
+.imagenbilletera {
+  width: 80%;
+  height: 70%;
+  border-radius: 25px;
+}
+
+
+
+.icono-derecha {
+  position: absolute;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: black; */
+  top: 35%;
+  left: 72%;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.icono-abajo {
+  position: absolute;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: black; */
+  top: 100%;
+  left: 40%;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.icono-izquierda {
+  position: absolute;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  top: 10%;
+  left: -28%;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.icono-arriba {
+  position: absolute;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: black; */
+  top: -50%;
+  left: 22%;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+i {
+  position:absolute;
+  font-size: 64px;
+   color: aqua;
+}
+
+@media screen and (min-width:576px) {
+  #billeterapage {
+    width: 85%;
+  }
+  .backgroundBilletera {
+    height: 200vh;
+  }
+  .imagenbilletera {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  #billeterapage {
+    width: 75%;
+  }
+  .backgroundBilletera {
+    height: 160vh;
+  }
+  .imagenbilletera {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 992px){
+  #billeterapage{
+    width: 60%;
+  }
+
+  .titulo {
+    position: absolute !important;
+    top:25%;
+    left:-35%;
+    width: 80%;
+    transform: rotate(-15deg);
+    font-size: 2.5rem;
+  }
+
+  .titular {
+    position: absolute !important;
+    top:42%;
+    left:-25%;
+    width: 80%;
+    transform: rotate(-15deg);
+  }
+
+  .backgroundBilletera {
+    display: none;
+  }
+
+  .container {
+    background: none;
+    left: 40%;
+    top: 8vh;
+  }
+
+  .aplicacionWeb {
+    margin-bottom: 1rem !important;
+  }
+
+  .comprasVrtuales {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .cuentaBancaria {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .comprasOnline {
+    margin-bottom: 0 !important;
+  }
+
+  .icono-abajo {
+    top: 107%;
+    left: 35%;
+  }
+
+
+}
+
+
+@media screen and (min-width: 1100px){
+  .icono-arriba {
+    top: -45%;
+    left: 25%;
+  }
+}
+
+@media screen and (min-width: 1260px){
+  .titular {
+    top:35%;
+  }
+}
+
+
+@media screen and (min-width: 1360px){
+  .icono-derecha {
+    left:80%;
+  }
+
+  .icono-abajo {
+    left: 40%;
+  }
+
+  .icono-izquierda {
+    top: 15%;
+    left: -20%;
+  }
+
+  .icono-arriba {
+    top: -40%;
+    left: 30%;
+  }
+}
+

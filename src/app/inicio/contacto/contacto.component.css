@@ -1,0 +1,196 @@
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.page {
+	margin:0;
+	color:#6a6f8c;
+  /* background: url('../../../assets/imagenes/nuevayork3.jpg') no-repeat center center; */
+  background-size: cover;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+
+.contact-wrap{
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	/* min-height:670px; */
+  min-height: 80vh;
+	position:relative;
+	/* background:url(https://raw.githubusercontent.com/khadkamhn/day-01-contact-form/master/img/bg.jpg) no-repeat center; */
+	/* box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19); */
+}
+.contact-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding-top:60px;
+  padding-left: 50px;
+  padding-right: 50px;
+	background:rgba(40,57,101,.9);
+  border-radius: 2rem;
+}
+
+h2 {
+  top: -5%;
+  color: rgba(255,255,255,.5);
+
+}
+.contact-html .sign-in-htm {
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	/* transform:rotateY(180deg); */
+	/* backface-visibility:hidden; */
+	transition:all .4s linear;
+}
+.contact-html .sign-in,
+.contact-form .group .check{
+	display:none;
+}
+.contact-html .tab,
+.contact-form .group .label,
+.contact-form .group .button{
+	text-transform:uppercase;
+}
+.contact-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.contact-html .sign-in:checked + .tab{
+	color:#fff;
+	border-color:#1161ee;
+}
+.contact-form{
+	min-height:345px;
+	position:relative;
+  top: -1rem;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.contact-form .group{
+	margin-bottom:15px;
+}
+.contact-form .group .label,
+.contact-form .group .input,
+.contact-form .group .button{
+	width:100%;
+	color:#fff;
+  display:block;
+}
+.contact-form .group .input,
+.contact-form .group .button{
+  border:none;
+	padding:15px 20px;
+	border-radius:15px;
+	background:rgba(255,255,255,.1);
+}
+
+.contact-form .group .input {
+  background-color: rgba(255,255,255,.2);
+}
+
+.contact-form .group .input::placeholder {
+  color: rgba(255,255,255,.5);
+}
+
+.contact-form .group .input:focus::placeholder{
+  color: rgba(255,255,255,.2);
+}
+
+
+.contact-form .group .input:hover,
+.contact-form .group .input:focus{
+  outline: none;
+  border: 1px solid #1161ee;
+}
+
+.contact-form .group .button:hover,
+.contact-form .group .button:focus {
+  outline: none;
+  border: 2px solid rgba(255,255,255,.2);
+}
+
+
+.contact-form .group input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.contact-form .group .label{
+	color:#aaa;
+	font-size:12px;
+}
+.contact-form .group .button{
+	background:#1161ee;
+}
+.contact-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.contact-form .group label .icon:before,
+.contact-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.contact-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.contact-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.contact-form .group .check:checked + label{
+	color:#fff;
+}
+.contact-form .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.contact-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.contact-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+
+.alert-dangerus {
+  /* color: #721c24; */
+  /* background: #f8d7da; */
+  /* border-color: #f5c6cb; */
+  margin-bottom: 10px;
+}
+
+.container-error-message {
+	/* background:rgba(40,57,101,.9); */
+  	padding: 0px;
+}
+
+button {
+	border-radius: 1rem !important;
+}
+
+
+/* button:disabled {
+	background: gray;
+ 	color: rgba(255,255,255,.2);
+	border: none;
+} */

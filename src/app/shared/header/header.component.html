@@ -1,0 +1,45 @@
+<header class="mb-1 shadow-lg sticky-top">
+  <!-- <div class="container-fluid bg-primary d-flex justify-content-center">
+    <p class='m-0 p-2 text-light'>Contactanos 03751-408245</p>
+  </div> -->
+  <nav class="navbar navbar-expand-xl navbar-dark bg-dark px-2" id="menu">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" (click)="clickLink('brand')"><span class="text-primary fs-2 fw-bold">e-</span>
+        <span class="text-primary fs-3 fw-bold">Waly</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-4 ms-sm-4 mb-xl-0">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li> -->
+          <li class="nav-item">
+            <!-- <a class="nav-link" style="cursor: pointer;" (click)="corrigeScroll('quienessomos')">Quiénes Somos?</a> -->
+            <a class="nav-link" id='nosotros' (click)="clickLink('nosotros')" routerLink="nosotros">Quiénes Somos?</a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="billetera" (click)="clickLink('billetera')" routerLink="billetera">Qué es una Billetera Virtual?</a>
+            <!-- <a class="nav-link" style="cursor: pointer;" (click)="corrigeScroll('queesunabilletera')">Qué es una Billetera Virtual?</a> -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="beneficios" (click)="clickLink('beneficios')" routerLink="beneficios">Beneficios</a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contacto" (click)="clickLink('contacto')" routerLink="contacto">Contáctanos</a>
+          </li>
+
+        </ul>
+        <form class="d-flex justify-content-around">
+          <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+          <button class="btn btn-outline-primary rounded" routerLink="registro/2">Registrate</button>
+          <div style="width: 30px;"></div>
+          <button class="btn btn-primary rounded" routerLink="registro/1">Ingresa</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>

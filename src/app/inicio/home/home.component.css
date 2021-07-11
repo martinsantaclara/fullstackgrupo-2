@@ -1,0 +1,20 @@
+.call-to-action {
+  position: absolute;
+  top:5vh;
+  left: 10vw;
+  width: 80vw;
+}
+
+@media screen and (min-width:992px){
+  .call-to-action {
+    top: 30vh;
+    left: 5%;
+    width: 45vw;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .call-to-action {
+      width: 33vw;
+  }
+}

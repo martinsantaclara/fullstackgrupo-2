@@ -1,0 +1,14 @@
+footer {
+  background: #1b2a4e;
+  min-height: 50px;;
+}
+footer p{
+  color:#f3f3f3;
+  text-align:center;
+}
+
+#iconos  i {
+  font-size: 26px;
+  padding: 0 8px;
+  color:#f3f3f3;
+}

@@ -1,0 +1,162 @@
+#nosotros {
+  width: 90%;
+}
+
+.empresa {
+  color: aqua;
+}
+
+.team-image {
+  position: relative;
+  padding: 10px;
+  z-index: 1;
+  transition: all 2s ease-out;
+}
+.team-image::before {
+  content: '';
+  position:absolute;
+  /* z-index: 1; */
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 25%;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+}
+
+figure {
+  overflow: hidden;
+}
+
+figure img {
+  padding: 10px;
+  transition: all 2s ease-out;
+  will-change: transform;
+}
+
+.team-info-ceo {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,103,123,0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 2s ease-out;
+}
+
+figure:hover > .team-info-ceo {
+  opacity: 1;
+  visibility: visible;
+}
+
+figure:hover > .team-info-ceo h5 {
+  /* margin-top: 180px;
+  margin-bottom: 5px; */
+  margin-top: 30%;
+  margin-bottom: 4%;
+
+
+}
+
+figure:hover > .team-info-ceo h6 {
+  padding-top: 0px;
+}
+
+figure:hover > img{
+  transform: scale(1.3);
+}
+
+figure .team-info-ceo h5{
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 120px;
+  transition: all 2s ease-out;
+  margin-top: 30px;
+}
+figure .team-info-ceo h6{
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+  padding-top: 200px;
+}
+
+.card-outer {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 30px;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.15);
+  max-width: 50%;
+  /* max-width: 70%; */
+  /* overflow: hidden; */
+}
+
+.card svg {
+  bottom: 0;
+  left: 0;
+  height: 55px;
+}
+
+.card-img-top {
+  transition: all 2s ease-out;
+}
+
+.card-title {
+  transition: all 2s ease-out;
+}
+.card-text {
+  transition: all 2s ease-out;
+}
+
+.card:hover > .image .card-img-top {
+  object-fit: cover;
+  object-position: left;
+  transform: scale(1.5);
+}
+
+/* .card-img-top:hover {
+  z-index: -1;
+} */
+
+.card:hover > .card-body .card-title{
+  color: #0d6efd;
+  transform: scale(1.5);
+}
+
+.card:hover > .card-body .card-text{
+  font-weight: bolder;
+}
+
+.team-desarrollo {
+  padding-bottom: 5rem;
+}
+
+@media screen and (min-width:768px) {
+  .card {
+    max-width: 70%;
+  }
+}
+
+@media screen and (min-width:992px){
+  #nosotros {
+    width: 75%;
+  }
+
+}
+
+@media screen and (min-width:1200px) {
+  #nosotros {
+    width: 60%;
+  }
+  .card-outer {
+    margin-bottom: 0;
+  }
+}
