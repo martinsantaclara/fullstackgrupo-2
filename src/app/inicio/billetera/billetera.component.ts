@@ -14,12 +14,12 @@ export class BilleteraComponent implements OnInit {
 
   ngOnInit(): void {
     AOS.init();
-    const imagenCarrusel = document.getElementsByClassName('claseImagenCarrusel');
-    const carrusel = document.getElementById('carousel');
-    this.render.addClass(carrusel,'dark');
-    for (var i = 0; i < imagenCarrusel.length; i++) {
-      this.render.setStyle(imagenCarrusel[i],'height','100vh');
-    }
+    // const imagenCarrusel = document.getElementsByClassName('claseImagenCarrusel');
+    // const carrusel = document.getElementById('carousel');
+    // this.render.addClass(carrusel,'dark');
+    // for (var i = 0; i < imagenCarrusel.length; i++) {
+    //   this.render.setStyle(imagenCarrusel[i],'height','100vh');
+    // }
   }
 
 }

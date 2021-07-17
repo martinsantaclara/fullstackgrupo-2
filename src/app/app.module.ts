@@ -16,6 +16,9 @@ import { HomeComponent } from './inicio/home/home.component';
 import { ContactoComponent } from './inicio/contacto/contacto.component';
 import { RegistroComponent } from './inicio/registro/registro.component';
 import { BeneficiosComponent } from './inicio/beneficios/beneficios.component';
+import { Home2Component } from './inicio/home2/home2.component';
+import { GridbilleteraComponent } from './gridbilletera/gridbilletera.component';
+import { GridgalleryComponent } from './gridgallery/gridgallery.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { BeneficiosComponent } from './inicio/beneficios/beneficios.component';
     HomeComponent,
     ContactoComponent,
     RegistroComponent,
-    BeneficiosComponent
+    BeneficiosComponent,
+    Home2Component,
+    GridbilleteraComponent,
+    GridgalleryComponent
   ],
   imports: [
     BrowserModule,

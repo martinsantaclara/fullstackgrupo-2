@@ -3,7 +3,32 @@
   top:5vh;
   left: 10vw;
   width: 80vw;
+  z-index: 1;
 }
+
+.contenedorImagen {
+  position: relative;
+  width: 100vw;
+  height: 40rem;
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+
+.imagenFondo {
+  flex-basis: 40%;
+  /* background-image: url("../../../assets/imagenes/Wallet_Isometric.svg"); */
+  background-image: url("../../../assets/imagenes/digital-wallet.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70%;
+  border-radius: 20px;
+  margin-right: 2rem;
+  z-index: 11;
+  /* height: 100vh; */
+}
+
 
 @media screen and (min-width:992px){
   .call-to-action {

@@ -1,14 +1,16 @@
 footer {
-  background: #1b2a4e;
-  min-height: 50px;;
+  /* background: #1b2a4e; */
+  /* background-color: #43C6AC !important; */
+  /* background: linear-gradient(90deg, rgba(248, 254, 252, 0.88) 0%, rgba(219, 251, 255, 0.88) 100%) !important; */
+  /* min-height: 50px; */
 }
 footer p{
-  color:#f3f3f3;
+  /* color:#f3f3f3; */
   text-align:center;
 }
 
 #iconos  i {
   font-size: 26px;
   padding: 0 8px;
-  color:#f3f3f3;
+  /* color:#f3f3f3; */
 }

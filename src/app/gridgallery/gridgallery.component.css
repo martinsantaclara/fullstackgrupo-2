@@ -1,0 +1,129 @@
+#gridbilletera {
+  /* width: 100%; */
+  /* overflow-x:visible; */
+  width: 100%;
+
+  /* background-color: brown; */
+  z-index: 1;
+}
+
+.contenedor {
+ position: relative;
+ width: 50%;
+ left: 50%;
+ top:4vh;
+ height: 80vh;
+ display:grid;
+ grid-template-columns: minmax(200px,250px) 70px minmax(200px,250px);
+ grid-template-rows: 45% 13% 45%;
+ place-items: center center;
+ z-index: 1;
+}
+
+
+.imagenbilletera {
+  /* width: 90%; */
+  /* max-width: 250px; */
+  /* height: 70%; */
+  max-width: 230px;
+  height: 200px;
+  border-radius: 25px;
+}
+
+.icono-derecha {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.icono-abajo {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.icono-izquierda {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.icono-arriba {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+ i {
+   position:relative;
+   top: -0.9rem;
+  font-size: 64px;
+   color: #198754;
+}
+
+@media screen and (min-width:576px) {
+
+  .imagenbilletera {
+    /* width: 70%; */
+  }
+}
+
+@media screen and (min-width:768px) {
+
+
+  .imagenbilletera {
+    /* width: 55%; */
+  }
+}
+
+@media screen and (min-width: 992px){
+
+
+  .container {
+    background: none;
+    /* left: 40%; */
+    top: 8vh;
+  }
+
+  .aplicacionWeb {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .comprasVrtuales {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+
+  .cuentaBancaria {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .comprasOnline {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+}
+

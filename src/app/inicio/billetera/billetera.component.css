@@ -4,19 +4,7 @@
   width: 90%;
 
   /* background-color: brown; */
-}
-
-.backgroundBilletera {
-  position: absolute;
-  top:90vh;
-  left:0;
-  width: 100%;
-  height: 160vh;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.5) 0,
-    rgba(0, 0, 0, 0.7) 50%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
+  z-index: 1;
 }
 
 .container {
@@ -97,6 +85,11 @@ i {
    color: aqua;
 }
 
+.separacion {
+  width: 100%;
+  height: 50px;
+}
+
 @media screen and (min-width:576px) {
   #billeterapage {
     width: 85%;
@@ -123,23 +116,23 @@ i {
 
 @media screen and (min-width: 992px){
   #billeterapage{
-    width: 60%;
+    width: 90%;
   }
 
   .titulo {
-    position: absolute !important;
+    /* position: absolute !important; */
     top:25%;
-    left:-35%;
-    width: 80%;
+    left:-5%;
+    /* width: 80%; */
     transform: rotate(-15deg);
     font-size: 2.5rem;
   }
 
   .titular {
-    position: absolute !important;
+    /* position: absolute !important; */
     top:42%;
-    left:-25%;
-    width: 80%;
+    /* left:-25%; */
+    /* width: 80%; */
     transform: rotate(-15deg);
   }
 
@@ -149,7 +142,7 @@ i {
 
   .container {
     background: none;
-    left: 40%;
+    /* left: 40%; */
     top: 8vh;
   }
 
@@ -189,7 +182,7 @@ i {
 
 @media screen and (min-width: 1260px){
   .titular {
-    top:35%;
+    top:25%;
   }
 }
 

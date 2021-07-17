@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -23,4 +23,28 @@ export class HeaderComponent implements OnInit {
       this.render.addClass(link,'active');
     }
   }
+
+  @HostListener("window:scroll")
+    onWindowScroll() {
+      const navbarMenu = document.getElementById('menu');
+      const imagenFondo = document.getElementById('imagenFondo');
+      const ultimoparrafo = document.getElementById('ultimoparrafo');
+      if (window.pageYOffset > 0) {
+        this.render.addClass(navbarMenu,'scroll');
+
+        const totallHeight = document.body.clientHeight + 50;
+        // const heightImagenFondo = ;
+        this.render.setStyle(imagenFondo,'height',`${totallHeight}px`);
+        // this.render.setStyle(imagenFondo,'height','1800px');
+
+      } else {
+        this.render.removeClass(navbarMenu,'scroll');
+        console.log('scroll igual a 0');
+      }
+    // console.log('window.pageYOffset ' + );
+    // console.log('document.documentElement.scrollTop ' + document.documentElement.scrollTop);
+    // console.log('document.body.scrollTop ' + document.body.scrollTop);
+  }
+
+
 }

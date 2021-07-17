@@ -11,6 +11,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     AOS.init();
+    console.log(screen.availHeight);
+    console.log(screen.availWidth);
+    console.log(window.screenY);
+    console.log(window.screenX);
+
   }
 
 }
