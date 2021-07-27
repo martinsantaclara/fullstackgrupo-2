@@ -1,5 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
-import AOS from 'aos';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-billetera',
@@ -10,16 +9,9 @@ export class BilleteraComponent implements OnInit {
 
   list = ['Qué es una billetera virtual?'];
 
-  constructor(private render: Renderer2) { }
+  constructor() { }
 
   ngOnInit(): void {
-    AOS.init();
-    // const imagenCarrusel = document.getElementsByClassName('claseImagenCarrusel');
-    // const carrusel = document.getElementById('carousel');
-    // this.render.addClass(carrusel,'dark');
-    // for (var i = 0; i < imagenCarrusel.length; i++) {
-    //   this.render.setStyle(imagenCarrusel[i],'height','100vh');
-    // }
   }
 
 }

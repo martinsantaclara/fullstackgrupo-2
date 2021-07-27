@@ -9,35 +9,33 @@ import { AppComponent } from './app.component';
 
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { BackgroundComponent } from './shared/background/background.component';
+
+import { HomeComponent } from './inicio/home/home.component';
 import { QuienessomosComponent } from './inicio/quienessomos/quienessomos.component';
 import { BilleteraComponent } from './inicio/billetera/billetera.component';
-import { HomeComponent } from './inicio/home/home.component';
-import { ContactoComponent } from './inicio/contacto/contacto.component';
-import { RegistroComponent } from './inicio/registro/registro.component';
 import { BeneficiosComponent } from './inicio/beneficios/beneficios.component';
-import { Home2Component } from './inicio/home2/home2.component';
-import { GridbilleteraComponent } from './gridbilletera/gridbilletera.component';
-import { GridgalleryComponent } from './gridgallery/gridgallery.component';
+import { ContactoComponent } from './inicio/contacto/contacto.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { BackgroundComponent } from './shared/background/background.component';
+
+import { RegistroComponent } from './inicio/registro/registro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    BackgroundComponent,
+    HomeComponent,
     QuienessomosComponent,
     BilleteraComponent,
-    HomeComponent,
-    ContactoComponent,
-    RegistroComponent,
     BeneficiosComponent,
-    Home2Component,
-    GridbilleteraComponent,
-    GridgalleryComponent
+    ContactoComponent,
+    BackgroundComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
+    DashboardModule,
     AppRoutingModule,
     AngularTypewriterEffectModule,
     ReactiveFormsModule

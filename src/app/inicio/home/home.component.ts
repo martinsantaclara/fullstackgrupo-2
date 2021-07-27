@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import AOS from 'aos';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,15 +8,16 @@ import AOS from 'aos';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private render: Renderer2) { }
 
   ngOnInit(): void {
-    AOS.init();
-    console.log(screen.availHeight);
-    console.log(screen.availWidth);
-    console.log(window.screenY);
-    console.log(window.screenX);
 
+    const imagenFondo = document.getElementById('imagenFondo');
+    const footer = document.getElementById('footer');
+    const topFooter = imagenFondo?.clientHeight! - 50;
+    this.render.setStyle(footer,'top',`${topFooter}px`);
+
+    AOS.init();
   }
 
 }

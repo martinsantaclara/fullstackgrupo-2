@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BilleteraComponent } from './billetera.component';
+import { GridgalleryComponent } from './gridgallery.component';
 
-describe('BilleteraComponent', () => {
-  let component: BilleteraComponent;
-  let fixture: ComponentFixture<BilleteraComponent>;
+describe('GridgalleryComponent', () => {
+  let component: GridgalleryComponent;
+  let fixture: ComponentFixture<GridgalleryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BilleteraComponent ]
+      declarations: [ GridgalleryComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BilleteraComponent);
+    fixture = TestBed.createComponent(GridgalleryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

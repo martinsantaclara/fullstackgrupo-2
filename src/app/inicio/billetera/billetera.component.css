@@ -1,209 +1,314 @@
-#billeterapage {
+#billetera {
   /* width: 100%; */
   /* overflow-x:visible; */
-  width: 90%;
-
-  /* background-color: brown; */
+  width: 100%;
+  min-height: 100rem;
+  padding-bottom: 30px;
   z-index: 1;
 }
 
-.container {
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.5) 0,
-    rgba(0, 0, 0, 0.7) 50%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
+.contenedor {
+ /* position: relative; */
+ width: 100%;
+ left: 0;
+ height: 65vh;
+ display:grid;
+ grid-template-columns: 1fr;
+ grid-template-rows: 260px 80px 260px 80px 260px 80px 260px;
+ place-items: center center;
+ z-index: 1;
+}
+
+.aplicacionWeb {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.comprasVrtuales {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.cuentaBancaria {
+  grid-column: 1/2;
+  grid-row: 7/8;
+}
+
+.comprasOnline {
+  grid-column: 1/2;
+  grid-row: 5/6;
 }
 
 
+
+
+
+
+.texto {
+  /* width: 55%; */
+  text-align: center;
+}
+
 .remarcado {
-  color: aqua;
+  /* color: aqua; */
+  /* color: #F07F54; */
+  /* background: linear-gradient(90deg, #F07F54 0%, #F07F54 100%);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 3px; */
+}
+.titulo {
+  /* position: absolute !important; */
+  /* width: 80%; */
+  font-size: 2.5rem;
+  font-weight:bolder;
+}
+
+.titular {
+  /* position: absolute !important; */
+
+  width: 100%;
+  /* left:-25%; */
+  /* width: 80%; */
 }
 
 .imagenbilletera {
-  width: 80%;
-  height: 70%;
+  max-width: 230px;
+  height: 230px;
   border-radius: 25px;
 }
 
-
-
-.icono-derecha {
-  position: absolute;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: black; */
-  top: 35%;
-  left: 72%;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-}
-
 .icono-abajo {
-  position: absolute;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: black; */
-  top: 100%;
-  left: 40%;
+  position: relative;
+  z-index: 1;
+  background-color: white;
   width: 64px;
   height: 64px;
   border-radius: 50%;
+  grid-column: 1/2;
+  grid-row: 2/3;
 }
 
-.icono-izquierda {
-  position: absolute;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  top: 10%;
-  left: -28%;
+.icono-abajo1 {
+  position: relative;
+  z-index: 1;
+  background-color: white;
   width: 64px;
   height: 64px;
   border-radius: 50%;
+  grid-column: 1/2;
+  grid-row: 4/5;
 }
 
-.icono-arriba {
-  position: absolute;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: black; */
-  top: -50%;
-  left: 22%;
+.icono-abajo2 {
+  position: relative;
+  z-index: 1;
+  background-color: white;
   width: 64px;
   height: 64px;
   border-radius: 50%;
+  grid-column: 1/2;
+  grid-row: 6/7;
 }
 
-i {
-  position:absolute;
+ i {
+   position:relative;
+   top: -0.9rem;
   font-size: 64px;
-   color: aqua;
-}
-
-.separacion {
-  width: 100%;
-  height: 50px;
+   /* color: #198754; */
+   /* color: #F07F54; */
+   color: #456475
 }
 
 @media screen and (min-width:576px) {
-  #billeterapage {
-    width: 85%;
+
+  #billetera {
+    /* height: 40rem; */
+    min-height: 40rem;
   }
-  .backgroundBilletera {
-    height: 200vh;
-  }
+
   .imagenbilletera {
-    width: 70%;
+    max-width: 230px;
+    height: 200px;
+    border-radius: 25px;
   }
+
+  .contenedor {
+    width: 100%;
+    left: calc((100vw - 550px)/2);;
+    grid-template-columns: minmax(200px,250px) 50px minmax(200px,250px);
+    grid-template-rows: 45% 13% 45%;
+    place-items: center center;
+   }
+
+  .aplicacionWeb {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .comprasVrtuales {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+
+  .cuentaBancaria {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .comprasOnline {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  .icono-derecha {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .icono-abajo {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  .icono-izquierda {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  .icono-arriba {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
 }
 
 @media screen and (min-width:768px) {
-  #billeterapage {
-    width: 75%;
-  }
-  .backgroundBilletera {
-    height: 160vh;
-  }
+
+
   .imagenbilletera {
-    width: 55%;
+    /* width: 55%; */
   }
 }
 
 @media screen and (min-width: 992px){
-  #billeterapage{
-    width: 90%;
+
+  #billetera {
+    height: 40rem;
+    z-index: 1;
+  }
+
+  .texto {
+    width: 55%;
+    top: -12vh;
   }
 
   .titulo {
-    /* position: absolute !important; */
-    top:25%;
-    left:-5%;
-    /* width: 80%; */
-    transform: rotate(-15deg);
-    font-size: 2.5rem;
+    top:25vh;
+    left:0%;
+    font-size: 34px !important;
   }
 
   .titular {
-    /* position: absolute !important; */
-    top:42%;
-    /* left:-25%; */
-    /* width: 80%; */
+    width: 90%;
+    top:52%;
+    left: 5%;
+  }
+
+  .contenedor {
+    width: 43%;
+    left: 52%;
+    top:-40vh;
+    height: 65vh;
+   }
+
+}
+
+@media screen and (min-width:1068px) and (max-width:1199px) {
+  .titulo {
+    left: 2%;
+  }
+  .texto {
+    top: -5vh;
+    left: 0%;
+  }
+}
+
+@media screen and (min-width:1041px) and (max-width:1060px) {
+  .contenedor {
+    top:-40vh;
+  }
+}
+
+@media screen and (min-width:1061px) {
+  .contenedor {
+    top:-35vh;
+  }
+}
+
+
+@media screen and (min-width: 1156px) {
+  .contenedor {
+    top: -30vh;
+  }
+}
+
+
+@media screen and (min-width:1200px) {
+
+  .texto {
+    top:0vh;
+  }
+
+  .titulo {
+    top:50%;
+    left:5%;
+  }
+
+  .titular {
+    top:52%;
+    left: 5%;
+    width: 90%;
+  }
+
+}
+
+@media screen and (min-width:1400px) {
+
+  .texto {
+    top: 5vh;
+    width: 50%;
+  }
+
+  .titulo {
+    top:50%;
+    left:-10%;
     transform: rotate(-15deg);
   }
 
-  .backgroundBilletera {
-    display: none;
-  }
-
-  .container {
-    background: none;
-    /* left: 40%; */
-    top: 8vh;
-  }
-
-  .aplicacionWeb {
-    margin-bottom: 1rem !important;
-  }
-
-  .comprasVrtuales {
-    margin-top: 0 !important;
-    margin-bottom: 1rem !important;
-  }
-
-  .cuentaBancaria {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .comprasOnline {
-    margin-bottom: 0 !important;
-  }
-
-  .icono-abajo {
-    top: 107%;
-    left: 35%;
-  }
-
-
-}
-
-
-@media screen and (min-width: 1100px){
-  .icono-arriba {
-    top: -45%;
-    left: 25%;
-  }
-}
-
-@media screen and (min-width: 1260px){
   .titular {
-    top:25%;
+    top:52%;
+    left: 5%;
+    width: 90%;
+    transform: rotate(-15deg);
   }
+
 }
-
-
-@media screen and (min-width: 1360px){
-  .icono-derecha {
-    left:80%;
-  }
-
-  .icono-abajo {
-    left: 40%;
-  }
-
-  .icono-izquierda {
-    top: 15%;
-    left: -20%;
-  }
-
-  .icono-arriba {
-    top: -40%;
-    left: 30%;
-  }
-}
-

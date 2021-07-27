@@ -1,56 +1,57 @@
-<div class="page">
-  <div class="login-wrap">
-    <div class="login-html">
-      <input id="tab-1" type="radio" name="tab" class="sign-in"><label for="tab-1" class="tab">Inicia Sesión</label>
-      <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registro</label>
-      <div class="login-form">
-        <div class="sign-in-htm">
-          <div class="group">
-            <label for="user" class="label">Nombre o Email</label>
-            <input id="user" type="text" class="input">
+<div class="page position-relative pt-3" id="page" data-aos="fade-down" data-aos-duration="2000">
+    <div class="contact-wrap" id="contact-wrap">
+      <div class="contact-html">
+        <h2 class="position-relative text-center text-white pb-2">Registro</h2>
+        <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="saveFormContact()">
+          <div class="sign-in-htm">
+            <div class="group">
+              <label for="nombre" class="label">Nombre</label>
+              <input id="nombre" type="text" class="input" formControlName="nombre" placeholder="nombre y apellido">
+              <div *ngIf="nombre?.valid && agregaError()"></div>
+              <div class="alert-dangerus" *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched) && agregaError()">
+                <div class="container-error-message" *ngIf="nombre?.hasError('required')">
+                  <p class="pt-2 ps-3">El nombre es requerido.</p>
+                </div>
+                <div class="container-error-message" *ngIf="nombre?.hasError('minlength')">
+                  <p class="pt-2 ps-3">El nombre debe contener 5 caracteres como mínimo.</p>
+                </div>
+              </div>
+            </div>
+            <div class="group">
+              <label for="pass" class="label">Email</label>
+              <input id="pass" type="email" class="input" formControlName="email" placeholder="ejemplo@correo.com">
+              <div *ngIf="email?.valid && agregaError()"></div>
+              <div class="alert-dangerus" *ngIf="email?.invalid && (email?.dirty || email?.touched) && agregaError()">
+                <div class="container-error-message" *ngIf="email?.hasError('required')">
+                  <p class="pt-2 ps-3">El email es requerido.</p>
+                </div>
+                <div class="container-error-message" *ngIf="email?.hasError('pattern')">
+                  <p class="pt-2 ps-3">Debe ser una dirección de email válida.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="group">
+                <label for="repitEmail" class="label">Repetir Email</label>
+                <input id="repitEmail" type="email" class="input" formControlName="repetirEmail"/>
+            </div>
+
+            <div class="group">
+                <label for="inputPass" class="label"> Contraseña</label>
+                <input id="inputPass" type="password" class="input" formControlName="password" />
+            </div>
+            <div class="group">
+                <label for="repitePass" class="label"> Repetir Contraseña</label>
+                <input id="repitePass" type="password" class="input" formControlName="repitePass"/>
+            </div>
+
+
+            <div class="group pt-4">
+              <!-- <button class="button" type="submit" [disabled]="contactForm.invalid">Enviar</button> -->
+              <button class="btn btn-primary w-100 p-3 rounded" type="submit" [disabled]="contactForm.invalid">Registrar</button>
+            </div>
           </div>
-          <div class="group">
-            <label for="pass" class="label">Contraseña</label>
-            <input id="pass" type="password" class="input" data-type="password">
-          </div>
-          <div class="group">
-            <input id="check" type="checkbox" class="check" checked>
-            <label for="check"><span class="icon"></span> Recuérdame</label>
-          </div>
-          <div class="group">
-            <input type="submit" class="button" value="Inicia Sesión">
-          </div>
-          <div class="hr"></div>
-          <div class="foot-lnk">
-            <a href="#forgot">Olvidaste tu contraseña?</a>
-          </div>
-        </div>
-        <div class="sign-up-htm">
-          <div class="group">
-            <label for="user" class="label">Nombre</label>
-            <input id="user" type="text" class="input">
-          </div>
-          <div class="group">
-            <label for="pass" class="label">Email</label>
-            <input id="pass" type="text" class="input">
-          </div>
-          <div class="group">
-            <label for="pass" class="label">Contraseña</label>
-            <input id="pass" type="password" class="input" data-type="password">
-          </div>
-          <div class="group">
-            <label for="pass" class="label">Repite Contraseña</label>
-            <input id="pass" type="password" class="input" data-type="password">
-          </div>
-          <div class="group">
-            <input type="submit" class="button" value="Registrate">
-          </div>
-          <div class="hr"></div>
-          <div class="foot-lnk">
-            <label for="tab-1">Ya tienes una Cuenta?</label>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
-  </div>
 </div>

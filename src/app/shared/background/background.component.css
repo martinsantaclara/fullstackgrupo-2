@@ -1,74 +1,16 @@
-#background {
-  left: 0;
-  top: 0;
-}
-
-#imagenCarrusel {
-  position: relative;
-  top: 35vh;
-  height: 95vh;
-}
-
-.claseImagenCarrusel {
-  height: 100vh;
-}
-
-.backgroundTitulo {
+main {
   position: absolute;
-  /* z-index: 1; */
-  top: 0;
-  right: 0;
+  width: 100%;
+  height: 100vh;
+  margin:0;
+  padding: 0;
+  background: linear-gradient(90deg, #99c3ed 0%, #456475 100%);
+}
+
+.esevg {
+  position:absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 35vh;
-  /* background-color: brown; */
-  background-image: linear-gradient(to right top, #0e479e, #0c3d5a, #3a4344, #818885, #e1e4da);
-  /* background: linear-gradient(
-    rgba(204, 36, 36, 0.3) 0,
-    rgba(40, 41, 133, 0.2) 50%,
-    rgba(204, 218, 81, 0.1) 100%
-  ); */
-
-}
-
-#carousel::after {
-  content: "";
-  position: absolute;
-  /* top: 0; */
-  top: 35vh;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.3) 0,
-    rgba(0, 0, 0, 0.2) 50%,
-    rgba(0, 0, 0, 0.1) 100%
-  );
-
-}
-
-#carousel.dark::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(
-    rgba(0, 0, 0, 1) 0,
-    rgba(0, 0, 0, 0.7) 50%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
-}
-
-
-@media screen and (min-width:992px){
-  #carousel::after {
-    top: 0;
-  }
-  #imagenCarrusel {
-    top: 0;
-    height: 100vh;
-  }
+  z-index: 1;
 }

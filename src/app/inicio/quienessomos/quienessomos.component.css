@@ -4,7 +4,8 @@
 }
 
 .empresa {
-  color: aqua;
+  /* color: aqua; */
+  color: #F07F54;
 }
 
 .team-image {
@@ -138,6 +139,15 @@ figure .team-info-ceo h6{
 
 .team-desarrollo {
   padding-bottom: 5rem;
+}
+
+@media screen and (min-width:600px) and (max-width:767px) {
+  .contenedor-img {
+    width: 40vw !important;
+  }
+  .card {
+    width: 35vw !important;
+  }
 }
 
 @media screen and (min-width:768px) {

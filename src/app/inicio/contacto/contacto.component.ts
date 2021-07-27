@@ -32,6 +32,18 @@ export class ContactoComponent implements OnInit {
 
   ngOnInit(): void {
 
+    const elment = document.getElementById('contact-wrap');
+    const obj = elment?.getBoundingClientRect();
+    const height = obj?.height!;
+
+    console.log('height contact-wrap '+height );
+
+    const elment1 = document.getElementById('page');
+    const obj1 = elment1?.getBoundingClientRect();
+    const height1 = obj1?.height!;
+
+    console.log('page '+height1 );
+
     Aos.init();
 
     // const imagenCarrusel = document.getElementsByClassName('claseImagenCarrusel');
@@ -46,6 +58,26 @@ export class ContactoComponent implements OnInit {
     if (this.contactForm.valid) {
         console.log('saved form');
     }
+  }
+
+  agregaError() {
+    const contact = document.getElementById('contact-wrap');
+    const page = document.getElementById('page');
+    const imagenFondo = document.getElementById('imagenFondo');
+    const obj = contact?.getBoundingClientRect();
+    let heightContact = obj?.height! + 10;
+
+    heightContact = (heightContact > 640 ? heightContact : 640);
+    this.render.setStyle(page,'height',`${heightContact}px`);
+    const heightImagen = heightContact + 125;
+    this.render.setStyle(imagenFondo,'height',`${heightImagen}px`);
+
+    const topFooter = heightImagen - 50;
+    const footer = document.getElementById('footer');
+    // this.render.setStyle(footer,'bottom','10px');
+    this.render.setStyle(footer,'top',`${topFooter}px`);
+
+    return true;
   }
 
   get nombre() { return this.contactForm.get('nombre'); }

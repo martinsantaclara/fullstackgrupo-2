@@ -4,16 +4,17 @@
   <!-- <div class="container-fluid bg-primary d-flex justify-content-center">
     <p class='m-0 p-2 text-light'>Contactanos 03751-408245</p>
   </div> -->
-  <nav class="navbar navbar-expand-xl navbar-dark px-2" id="menu">
+  <nav class="navbar navbar-expand-xl navbar-dark px-2 py-0" id="menu">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#" (click)="clickLink('brand')"><span class="text-success fs-2 fw-bold">e-</span>
-        <span class="text-success fs-3 fw-bold">Waly</span>
+      <a class="navbar-brand py-0 d-flex align-items-center" href="#" (click)="clickLink('brand')">
+        <img src="../../../assets/imagenes/logo1_1.png" alt="">
+        <span class="text-white fs-3 fw-bold ps-2">CHAMIGO</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-4 ms-sm-4 mb-xl-0">
+        <ul class="navbar-nav me-auto mb-2 ms-sm-4 mb-xl-0">
           <!-- <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li> -->
@@ -35,11 +36,11 @@
           </li>
 
         </ul>
-        <form class="d-flex justify-content-around">
+        <form class="d-flex justify-content-around mb-2 mb-xl-0">
           <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-          <button class="btn btn-outline-success rounded" routerLink="registro/2">Registrate</button>
+          <button class="btn rounded btn-registro" routerLink="registro">Registrate</button>
           <div style="width: 30px;"></div>
-          <button class="btn btn-success rounded" routerLink="registro/1">Ingresa</button>
+          <button class="btn btn-primary rounded" routerLink="homeDashboard">Ingresa</button>
         </form>
       </div>
     </div>
